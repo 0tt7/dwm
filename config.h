@@ -56,10 +56,10 @@ static const Rule rules[] = {
 	/* class                 instance    title       tags mask     isfloating   monitor */
 	{ "Android Emulator",    NULL,       NULL,       0,            1,           -1 },
 	{ "vlc",    NULL,       NULL,       0,            1,           -1 },
-{ "mpv",    NULL,       NULL,       0,            1,           -1 },
-{ "Thunar",              NULL,       NULL,       0,            1,           -1 },
+        { "mpv",    NULL,       NULL,       0,            1,           -1 },
+        { "Thunar",	NULL,       NULL,       0,            1,           -1 },
 	{ "Mousepad",              NULL,       NULL,       0,            1,           -1 },
-  { "Catfish",              NULL,       NULL,       0,            1,           -1 },
+        { "Catfish",              NULL,       NULL,       0,            1,           -1 },
 	{ "Emulator",            NULL,       NULL,       0,            1,           -1 },
 	{ "quemu-system-i386",   NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",             NULL,       NULL,       1 << 8,       0,           -1 },
@@ -104,25 +104,25 @@ static const char *nemocmd[] = { "thunar" , NULL};
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 static const char *musiccmd[] = {"netease-cloud-music" , NULL};
 static const char *fctixcmd[] = {"fcitx5" , NULL};
-static const char *upvol[]   = { "/home/kevin/scripts/vol-up.sh",  NULL };
-static const char *downvol[] = { "/home/kevin/scripts/vol-down.sh",  NULL };
-static const char *mutevol[] = { "/home/kevin/scripts/vol-toggle.sh",  NULL };
-static const char *wpcmd[]  = { "/home/kevin/scripts/wp-change.sh", NULL };
-static const char *sktogglecmd[]  = { "/home/kevin/scripts/sck-tog.sh", NULL };
+static const char *upvol[]   = { "~/scripts/vol-up.sh",  NULL };
+static const char *downvol[] = { "~/scripts/vol-down.sh",  NULL };
+static const char *mutevol[] = { "~/scripts/vol-toggle.sh",  NULL };
+static const char *wpcmd[]  = { "~/scripts/wp-change.sh", NULL };
+static const char *sktogglecmd[]  = { "~/kevin/scripts/sck-tog.sh", NULL };
 static const char *searchcmd[] = { "catfish" , NULL };
-static const char *nautilustogcmd[]  = { "/home/kevin/scripts/nautilus-tog.sh", NULL };
+static const char *nautilustogcmd[]  = { "~/scripts/nautilus-tog.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 
-static const char *setqwertycmd[]  = { "/home/kevin/scripts/setxmodmap-qwerty.sh", NULL };
-static const char *setcolemakcmd[]  = { "/home/kevin/scripts/setxmodmap-colemak.sh", NULL };
+static const char *setqwertycmd[]  = { "~/scripts/setxmodmap-qwerty.sh", NULL };
+static const char *setcolemakcmd[]  = { "~/scripts/setxmodmap-colemak.sh", NULL };
 
-static const char *suspendcmd[]  = { "/home/kevin/scripts/suspend.sh", NULL };
+static const char *suspendcmd[]  = { "~/scripts/suspend.sh", NULL };
 
-static const char *screenlockcmd[]  = { "/home/kevin/scripts/screenlock.sh", NULL};
+static const char *screenlockcmd[]  = { "~/scripts/screenlock.sh", NULL};
 
-static const char *incbacklightcmd[]  = { "/home/kevin/scripts/inc-backlight.sh", NULL};
-static const char *decbacklightcmd[]  = { "/home/kevin/scripts/dec-backlight.sh", NULL};
+static const char *incbacklightcmd[]  = { "~/scripts/inc-backlight.sh", NULL};
+static const char *decbacklightcmd[]  = { "~/scripts/dec-backlight.sh", NULL};
 
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 
@@ -130,11 +130,11 @@ static Key keys[] = {
 	/* modifier            key                      function        argument */
 	{ MODKEY,              XK_d,                    spawn,          {.v = dmenucmd } },
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
-    { MODKEY,              XK_Return,               spawn,          {.v = fctixcmd } },
-    { MODKEY,              XK_Return,               spawn,          {.v = bluetcmd} },
-    { MODKEY,              XK_i,      				incnmaster,     {.i = +1 } },
+        { MODKEY,              XK_Return,               spawn,          {.v = fctixcmd } },
+        { MODKEY,              XK_Return,               spawn,          {.v = bluetcmd} },
+        { MODKEY,              XK_i,      				incnmaster,     {.i = +1 } },
 	{ MODKEY,              XK_u,      				incnmaster,     {.i = -1 } },
-  { MODKEY|ControlMask,                       XK_r,      setlayout,      {.v = &layouts[7]} },
+        { MODKEY|ControlMask,                       XK_r,      setlayout,      {.v = &layouts[7]} },
 	{ MODKEY|ControlMask,                       XK_t,      setlayout,      {.v = &layouts[8]} },
 	{ MODKEY|ControlMask,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY|ControlMask,                       XK_u,      setlayout,      {.v = &layouts[3]} },
@@ -145,13 +145,13 @@ static Key keys[] = {
 //  { MODKEY,              XK_Return,               spawn,          {.v = mailcmd} },
 	{ MODKEY,              XK_s,                    spawn,          {.v = searchcmd } },
 	
-{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[5]} },   
-{ MODKEY,                       XK_p,      setlayout,      {.v = &layouts[4]} },   
-	{ MODKEY,              XK_c,                    spawn,          {.v = browsercmd } },
+        { MODKEY,                       XK_o,      setlayout,      {.v = &layouts[5]} },   
+        { MODKEY,                       XK_p,      setlayout,      {.v = &layouts[4]} },   
+        { MODKEY,              XK_c,                    spawn,          {.v = browsercmd } },
 	{ MODKEY,              XK_c,                    spawn,          {.v = fctixcmd } },
-    { MODKEY,              XK_c,                    spawn,          {.v = bluetcmd} },
-    { MODKEY,              XK_x,                    spawn,          {.v = mailcmd} },
-    { MODKEY,	           XK_v,			        spawn,		      {.v = musiccmd } },
+        { MODKEY,              XK_c,                    spawn,          {.v = bluetcmd} },
+        { MODKEY,              XK_x,                    spawn,          {.v = mailcmd} },
+        { MODKEY,	           XK_v,			        spawn,		      {.v = musiccmd } },
 	{ MODKEY,              XK_h,                    setmfact,       {.f = -0.02} },
 	{ MODKEY,              XK_l,                    setmfact,       {.f = +0.02} },
 	{ MODKEY, 	           XK_z,			        spawn,		      {.v = nemocmd } },
@@ -188,15 +188,15 @@ static Key keys[] = {
 	{ MODKEY,              XK_Tab,                  view,           {0} },
 	{ MODKEY,   	       XK_q,                    killclient,     {0} },
 	{ MODKEY,              XK_t,                    setlayout,      {.v = &layouts[0]} },
-    { MODKEY,              XK_f,                    setlayout,      {.v = &layouts[1]} },
+        { MODKEY,              XK_f,                    setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,              XK_m,                    setlayout,      {.v = &layouts[2]} },
-{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
+        { MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,    	       XK_f,                    fullscreen,     {0} },
 	{ MODKEY,              XK_space,                setlayout,      {0} },
 	{ MODKEY|ShiftMask,    XK_space,                togglefloating, {0} },
 	
-{ MODKEY|ShiftMask,             XK_g,      setlayout,      {.v = &layouts[3]} },
-  { MODKEY,              XK_apostrophe,           togglescratch,  {.v = scratchpadcmd } },
+        { MODKEY|ShiftMask,             XK_g,      setlayout,      {.v = &layouts[3]} },
+        { MODKEY,              XK_apostrophe,           togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,              XK_0,                    view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,    XK_0,                    tag,            {.ui = ~0 } },
 	{ MODKEY,              XK_comma,                focusmon,       {.i = -1 } },
