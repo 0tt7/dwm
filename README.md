@@ -11,3 +11,8 @@
 
 ![pz](pz.png)
 
+## INSTALL
+```shell
+make && make clean install
+```
+
