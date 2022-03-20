@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # dwm
 ## my dwm config
 =======
